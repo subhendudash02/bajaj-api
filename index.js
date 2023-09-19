@@ -25,7 +25,8 @@ app.post('/bfhl', (req, res) => {
         }
     }
 
-    let highest = alpha.sort().pop();
+    alpha.sort();
+    let highest = alpha[alpha.length - 1]; 
 
     res.send({
         "is_success": true,
